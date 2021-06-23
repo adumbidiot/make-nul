@@ -1,0 +1,13 @@
+[package]
+name = "make-nul"
+version = "0.0.0"
+edition = "2018"
+
+[dependencies]
+winapi = { version = "0.3.9", features = [ "winbase", "lmcons", "shlobj" ] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 'z'
+panic = 'abort'
