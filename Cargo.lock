@@ -3,9 +3,24 @@
 version = 3
 
 [[package]]
+name = "bitflags"
+version = "1.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cf1de2fe8c75bc145a2f577add951f8134889b4795d47466a54a5c846d691693"
+
+[[package]]
 name = "make-nul"
 version = "0.0.0"
 dependencies = [
+ "skylight",
+]
+
+[[package]]
+name = "skylight"
+version = "0.0.0"
+source = "git+https://github.com/adumbidiot/skylight-rs#7a5dc0e4c369d85d250eb5046d49e066c1e7ea4c"
+dependencies = [
+ "bitflags",
  "winapi",
 ]
 
